@@ -1,0 +1,232 @@
+.Origin{
+  grid-template-columns: repeat(2,1fr);
+  height: get-vw(1110px);
+  @include to(m){
+    height: auto;
+    display: block;
+  }
+  .col-right{
+    padding-top: calc(var(--header-height) + #{get-vw(150px)});
+    padding-bottom: get-vw(150px);
+    padding-left: get-vw(200px);
+    padding-right: get-vw(200px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include to(m) {
+      padding: 3em 4em;
+    }
+    h2{
+      font-size: get-vw(82px);
+      display: none;
+      @include to(m) {
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      @include from(l){
+        display: block;
+      }
+    }
+    p{
+      font-size: get-vw(38px);
+      line-height: 1;
+      position: relative;
+      @include to(m) {
+        font-size: 1em;
+        text-align: center;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: calc(#{get-vw(82px)} * -1);
+        background-color: rgba(#000,.3);
+      }
+    }
+  }
+}
+.img-container-color{
+  padding-top: var(--header-height);
+  background-color: #726d65;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  @include to(m) {
+    padding-top: calc(var(--header-height) + 2em);
+    padding-bottom: 3em;
+  }
+  img{
+    clip-path: var(--clip-path);
+    width: get-vw(480px);
+    height: auto;
+    margin-bottom: get-vw(35px);
+    @include to(m){
+      width: 60%;
+    }
+  }
+  p{
+    // width: get-vw(530px);
+    color: white;
+    font-size: get-vw(18px);
+    text-align: center;
+    @include to(m){
+      width: 70%;
+      font-size: .8em;
+    }
+  }
+  a{
+    font-size: get-vw(14px);
+    position: absolute;
+    right: get-vw(50px);
+    bottom: get-vw(50px);
+    color: white;
+    display: inline-block;
+    @include to(m) {
+      font-size: .5em;
+      right: 1rem;
+      bottom: 1rem;
+    }
+    &::before{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      background-color: white;
+    }
+  }
+}
+.Tequilas{
+  padding: 0em 1em 1em;
+  font-family: var(--comisioner);
+  font-weight: 300;
+  @include from(m){
+    padding-top: 4em;
+  }
+  @include from(l){
+    margin-bottom: get-vw(50px);
+  }
+  h2{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2rem;
+    @include from(l){
+      margin-bottom: get-vw(105px);
+    }
+  }
+  &__grid{
+    @include from(sp){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 2em;
+      column-gap: 10%;
+    }
+    @include from(l){
+      padding: 0 get-vw(344px);
+      column-gap: get-vw(112px);
+      row-gap: get-vw(170px);
+    }
+    img{
+      height: 80%;
+      @include from(sp){
+        height: 90%;
+        width: auto;
+      };
+      @include from(l){
+        height: 100%;
+        max-height: get-vw(318px);
+      }
+    }
+  }
+  .tequila-item{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10%;
+    padding: 0 1em;
+    align-items: center;
+    // margin-bottom: 2em;
+    // border-bottom: 1px solid #000;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(#000, .3);
+      bottom: calc(get-vw(85px) * -1);
+      left: 0;
+    }
+    .tequila-data{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+    }
+    .tequia-description{
+      margin-top: 1.5em;
+      @include from(l){
+        margin-top: get-vw(30px);
+      }
+    }
+    h3{
+      font-size: 1.3em;
+      @include from(l){
+        font-size: get-vw(38px);
+      }
+    }
+    p{
+      font-size: .8em;
+      line-height: 1.2;
+      @include from(l) {
+          font-size: get-vw(16px);
+        }
+      span{
+        font-weight: bold;
+        margin-right: .5em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.Production{
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+  padding-bottom: 2em;
+  @include from(l){
+    padding-bottom: get-vw(143px);
+  }
+  img{
+    margin: 0 auto;
+    width: 20%;
+    margin-bottom: 1em;
+    @include from(m){
+      width: get-vw(80px);
+    }
+  }
+  br{
+    @include to(m){
+      display: none;
+    }
+  }
+  p{
+    line-height: 1.1;
+    @include from(l){
+      font-size: get-vw(38px);
+    }
+  }
+}
+.olive{
+  background-color: #707064;
+}

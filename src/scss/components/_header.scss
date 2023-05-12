@@ -1,0 +1,130 @@
+// .main-header{
+//   display: flex;
+//   grid-template-columns: 11.97916666666667vw 1fr;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 0 2.083%;
+//   height: 5.885416666666667vw;
+//   position: absolute;
+//   width: 100%;
+//   z-index: 500;
+//   &::after{
+//     content: '';
+//     width: calc(100% - 4.116%);
+//     display: block;
+//     position: absolute;
+//     bottom: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     height: 1px;
+//     background-color: #272525;
+//   }
+//   a{
+//     display: block;
+//     width: 11.97916666666667vw;
+//     height: 2.34375vw;
+//     overflow: hidden;
+//     &.light{
+//       img{
+//         transform: translateY(-50%);
+//       }
+
+//     }
+//   }
+// }
+// .main-menu{
+
+//   // background: lime;
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-family: var(--crimson);
+//   font-weight: 500 ;
+//   a{
+//     // color: red;
+//     font-size: 4vw;
+//   }
+
+// }
+// main{
+//   padding-top: 200px;
+// }
+
+// .main-nav{
+//   transition: all .5s;
+//   z-index: 450;
+//   position: absolute;
+//   // display: none;
+//   width: 100%;
+//   height: 100vh;
+//   top: 0;
+//   left: 0;
+//   background-color: #e6dcd2;
+//   opacity: 0;
+//   visibility: hidden;
+//   &.is-active {
+//       opacity: 1;
+//       visibility: visible;
+//     }
+// }
+// .menu-social{
+//   display: flex;
+//   justify-content: space-between;
+//   width: 110px;
+//   height: 40px;
+//   position: absolute;
+//   bottom: 5%;
+//   right: calc((10000/1920)*1vw);
+//   li, a{
+//     height: inherit;
+//   }
+//   a{
+//     width: 40px;
+//   }
+// }
+.main-header{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: var(--header-height);
+  padding: 0 var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // background-color:var(--body-bg);
+  z-index: 1000;
+  transition: var(--transition);
+  &.is-active{
+    background-color: var(--menu-bg);
+  }
+  &::after{
+    content: '';
+    width: calc(100% - 4.116%);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    background-color: rgba(#000,.25);
+  }
+  a{
+    width: 40vw;
+    height: 8vw;
+    overflow: hidden;
+    @include from(l){
+      width: 11.97916666666667vw;
+      height: 2.34375vw;
+    }
+    .light &{
+      img{
+        display: block;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

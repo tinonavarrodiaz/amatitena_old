@@ -1,0 +1,60 @@
+.dgrid{
+  @include from(660px){
+    display: grid;
+    &.col-2{
+      grid-template-columns: repeat(2,1fr);
+    }
+}
+}
+.Agave-float{
+  position: absolute;
+  height: get-vw(350px) !important;
+  width: auto !important;
+  display: none;
+  top: 0;
+  left: 0;
+  // background-color: lime;
+  // transform: translateX(-38%);
+  @include from(l){
+    display: block;
+  }
+  &-rigth{
+    left: unset;
+    right: 0;
+    // transform: translateX(54%);
+  }
+}
+.Home .Agave-float{
+  top: get-vw(790px);
+}
+.Home .Agave-float-rigth{
+  top: get-vw(2400px)
+}
+.Process .Agave-float{
+  top: get-vw(2100px);
+}
+.Process .Agave-float-rigth{
+  top: get-vw(3400px)
+}
+.Contact .Agave-float{
+  top: get-vw(1170px);
+  height: get-vw(355px);
+}
+.History .Agave-float-left{
+  top: get-vw(2200px);
+}
+.History .Agave-float-rigth{
+  top: get-vw(1080px)
+}
+.Tour .Agave-float-left{
+  top: get-vw(1300px);
+}
+.Tour .Agave-float-rigth{
+  top: get-vw(2700px)
+}
+.WhereToBuy .Agave-float-rigth{
+  top: get-vw(1200px)
+}
+a{
+  font-family: var(--comisioner);
+}
