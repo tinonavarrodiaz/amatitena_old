@@ -1,5 +1,6 @@
-.main-nav{
+.main-nav {
   position: absolute;
+  font-family: var(--crimson);
   height: 100vh;
   width: 100%;
   background-color: var(--menu-bg);
@@ -10,28 +11,34 @@
   justify-content: center;
   text-align: center;
   font-family: var(--crimson);
-  font-weight: 500 ;
+  font-weight: 500;
   font-size: 2em;
   // padding-top: var(--header-height);
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
-  @include from(m){
+
+  @include from(m) {
     font-size: 3em;
   }
-  @include from(lg){
+
+  @include from(lg) {
     font-size: get-vw(80px);
   }
-  &.is-active{
+
+  &.is-active {
     opacity: 1;
     visibility: visible;
   }
 }
-.menu-social{
+
+.menu-social {
   --size: .75em;
-  @include from(lg){
+
+  @include from(lg) {
     --size: 2.5rem;
   }
+
   height: var(--size);
   width: calc(var(--size) * 3);
   display: flex;
@@ -39,7 +46,8 @@
   position: absolute;
   right: 10%;
   bottom: 1em;
-  a{
+
+  a {
     height: var(--size);
     width: var(--size);
     display: block;

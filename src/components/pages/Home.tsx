@@ -6,20 +6,21 @@ import Banner from '../organisms/Banner';
 import Bottom from '../organisms/home/Bottom';
 
 const Home = () => {
-  useEffect(()=>{
+  useEffect(() => {
     // @ts-ignore
     document.querySelector('main').classList.add('page-home');
-    const logo:any = document.getElementById('logo')
-    logo.src="/logo.svg"
-  },[])
+    const logo: any = document.getElementById('logo')
+    logo.src = "/logo.svg"
+  }, [])
   return (
     <section className="page Home">
-      <Selection/>
-      <History/>
-      <Banner img='/img/home/campo-agave.jpg' />
-      <Bottom/>
-      <img src="img/agave-left.png" alt="Agave" className='Agave-float Agave-float-left'/>
-      <img src="img/agave-rigth.png" alt="Agave" className='Agave-float Agave-float-rigth'/>
+      <Selection />
+      <History />
+      <Banner img='banner0' />
+
+      <Bottom />
+      <img src="img/agave-left.png" alt="Agave" className='Agave-float Agave-float-left' />
+      <img src="img/agave-rigth.png" alt="Agave" className='Agave-float Agave-float-rigth' />
     </section>
   )
 };

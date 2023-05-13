@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Img from '../../organisms/Img'
 const Selection = () => {
   return (
     <article className="Selection">
@@ -13,7 +13,7 @@ const Selection = () => {
           <span className="button-like">UNIQUE IN ITS CLASS</span>
         </div>
         <div className="col-right" data-aos='fade-left'>
-          <img src="/img/home/jimador.jpg" alt="Jimador" />
+          <Img img="jimador" />
         </div>
       </div>
 

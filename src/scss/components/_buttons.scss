@@ -27,3 +27,8 @@
     display: none;
   }
 }
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  height: 1px;
+}

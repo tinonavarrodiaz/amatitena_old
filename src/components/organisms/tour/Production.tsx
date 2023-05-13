@@ -1,12 +1,13 @@
 import React from 'react'
+import Img2 from '../Img2'
 const path = '/img/experience'
 const Production = () => {
   return (
     <article className='Tour__production'>
       <h2 data-aos="zoom-in">Production Process</h2>
-      <img src={`${path}/agave.jpg`} alt="Agave" data-aos="zoom-in"/>
+      <Img2 img={`agave`} />
       <p data-aos="zoom-out">
-        During our tour, you will discover the manufacturing<br/> process of Amatiteña Tequila. 100% artisanal, with a<br/> tour of our factory and our agave fields.
+        During our tour, you will discover the manufacturing<br /> process of Amatiteña Tequila. 100% artisanal, with a<br /> tour of our factory and our agave fields.
       </p>
       <p data-aos="zoom-out">
         $500 MXN per person<br />

@@ -7,11 +7,19 @@ import AOS from 'aos';
 
 const AppTemplate = () => {
   useEffect(() => {
+    // AOS.init({
+    //   easing: 'ease-out-back',
+    //   duration: 1600,
+    //   startEvent: 'DOMContentLoaded',
+    //   useClassNames: true,
+    //   once: true,
+    // });
     AOS.init({
       easing: 'ease-out-back',
-      duration: 1600,
-      // startEvent: 'DOMContentLoaded',
+      duration: 1250,
+      startEvent: 'DOMContentLoaded',
       useClassNames: true,
+      offset: 300,
       // once: true,
     });
   }, []);
@@ -19,7 +27,7 @@ const AppTemplate = () => {
     <>
       <Header />
       <main>
-        <Outlet/>
+        <Outlet />
       </main>
       <Footer />
     </>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { process } from '../../../utilities/process'
+import Img from '../Img'
 
 const ProcessOrg = () => {
   return (
@@ -9,7 +10,7 @@ const ProcessOrg = () => {
           return (
             <div className='Process__process-item' key={index} data-aos="fade-right" data-aos-delay={`${index}*200`} data-aos-offset="500">
               <div className="col-img">
-                <img src={`/img/process/${item.img}`} alt={item.name} />
+                <Img img={item.img} />
               </div>
               <div className="col-text">
                 <h3>{item.name}</h3>

@@ -1,60 +1,80 @@
-.dgrid{
-  @include from(660px){
+.dgrid {
+  @include from(660px) {
     display: grid;
-    &.col-2{
-      grid-template-columns: repeat(2,1fr);
+
+    &.col-2 {
+      grid-template-columns: repeat(2, 1fr);
     }
+  }
 }
-}
-.Agave-float{
+
+.Agave-float {
   position: absolute;
   height: get-vw(350px) !important;
   width: auto !important;
   display: none;
   top: 0;
   left: 0;
+
   // background-color: lime;
   // transform: translateX(-38%);
-  @include from(l){
+  @include from(l) {
     display: block;
   }
-  &-rigth{
+
+  &-rigth {
     left: unset;
     right: 0;
     // transform: translateX(54%);
   }
 }
-.Home .Agave-float{
+
+.Home .Agave-float {
   top: get-vw(790px);
 }
-.Home .Agave-float-rigth{
+
+.Home .Agave-float-rigth {
   top: get-vw(2400px)
 }
-.Process .Agave-float{
+
+.Process .Agave-float {
   top: get-vw(2100px);
 }
-.Process .Agave-float-rigth{
+
+.Process .Agave-float-rigth {
   top: get-vw(3400px)
 }
-.Contact .Agave-float{
+
+.Contact .Agave-float {
   top: get-vw(1170px);
   height: get-vw(355px);
 }
-.History .Agave-float-left{
+
+.History .Agave-float-left {
   top: get-vw(2200px);
 }
-.History .Agave-float-rigth{
+
+.History .Agave-float-rigth {
   top: get-vw(1080px)
 }
-.Tour .Agave-float-left{
+
+.Tour .Agave-float-left {
   top: get-vw(1300px);
 }
-.Tour .Agave-float-rigth{
+
+.Tour .Agave-float-rigth {
   top: get-vw(2700px)
 }
-.WhereToBuy .Agave-float-rigth{
+
+.WhereToBuy .Agave-float-rigth {
   top: get-vw(1200px)
 }
-a{
+
+a {
   font-family: var(--comisioner);
+}
+
+.Origin a {
+  font-family: var(--chivo) !important;
+  font-weight: 200 !important;
 }
