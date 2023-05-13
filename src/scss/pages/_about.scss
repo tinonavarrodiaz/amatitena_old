@@ -9,6 +9,8 @@
     display: block;
   }
 
+  .col-left {}
+
   .col-right {
     padding-top: calc(var(--header-height) + #{get-vw(150px)});
     padding-bottom: get-vw(150px);
@@ -24,7 +26,6 @@
     }
 
     h2 {
-      font-size: get-vw(82px);
       display: none;
 
       @include to(m) {
@@ -34,6 +35,7 @@
       }
 
       @include from(l) {
+        font-size: get-vw(82px);
         display: block;
       }
     }
@@ -43,9 +45,9 @@
       font-weight: 300;
       line-height: 1;
       position: relative;
+      font-size: 1rem;
 
       @include to(m) {
-        font-size: 1em;
         text-align: center;
       }
 
@@ -72,37 +74,46 @@
   align-items: center;
   height: 100%;
   position: relative;
+  // padding-bottom: 6em !important;
 
   @include to(m) {
     padding-top: calc(var(--header-height) + 2em);
-    padding-bottom: 3em;
+    padding-bottom: 6em;
   }
 
   img {
     clip-path: var(--clip-path);
     width: get-vw(480px);
     height: auto;
-    margin-bottom: get-vw(35px);
+    margin: 0 auto;
+    margin-bottom: 1rem;
 
     @include to(m) {
+      margin-bottom: get-vw(35px);
       width: 60%;
     }
   }
 
   p {
     // width: get-vw(530px);
+    font-size: 14px !important;
     color: white;
-    font-size: get-vw(18px);
     text-align: center;
 
     @include to(m) {
       width: 70%;
       font-size: .8em;
     }
+
+    @include to(l) {
+      font-size: get-vw(18px);
+      width: 70%;
+      font-size: .8em;
+    }
   }
 
   a {
-    font-size: get-vw(14px);
+    font-size: 10px !important;
     position: absolute;
     right: get-vw(50px);
     bottom: get-vw(50px);
@@ -113,6 +124,11 @@
       font-size: .5em;
       right: 1rem;
       bottom: 1rem;
+    }
+
+    @include from(l) {
+      font-size: get-vw(14px);
+
     }
 
     &::before {
@@ -165,7 +181,8 @@
     }
 
     img {
-      height: 80%;
+      height: 200px;
+      margin: 0 auto;
 
       @include from(sp) {
         height: 90%;
@@ -175,6 +192,7 @@
       ;
 
       @include from(l) {
+        margin: 0;
         height: 100%;
         max-height: get-vw(318px);
       }
@@ -182,8 +200,8 @@
   }
 
   .tequila-item {
-    display: grid;
     grid-template-columns: auto 1fr;
+    margin-bottom: 1em;
     // column-gap: 10%;
     padding: 0 1em 0 0;
     align-items: center;
@@ -192,6 +210,7 @@
     position: relative;
 
     @include from(m) {
+      display: grid;
       // padding-right: 0;
     }
 
@@ -202,8 +221,13 @@
       width: 100%;
       height: 1px;
       background-color: rgba(#000, .3);
-      bottom: calc(get-vw(85px) * -1);
+      bottom: -.8em;
       left: 0;
+
+      @include from(l) {
+        bottom: calc(get-vw(85px) * -1);
+
+      }
     }
 
     .tequila-data {

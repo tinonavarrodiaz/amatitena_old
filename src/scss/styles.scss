@@ -63,3 +63,9 @@ $legacy : true; // Soporte para versiones antiguas
 // Todos los hacks que hayas necesitado para solucionar conflictos
 // o resolver situaciones extremas. Se espera poder mejorarlos luego.
 @import "hacks/hacks";
+
+.History > img{
+  @include from(l){
+    margin-bottom: get-vw(80px);
+  }
+}

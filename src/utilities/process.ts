@@ -15,7 +15,7 @@ export const process = [
     description: 'The milling process takes place in a Tahona, where the juices and honeys of the agave are extracted with the gentle crushing of the large Tahona stone, a 100% artisanal process.'
   },
   {
-    name: 'process',
+    name: 'FERMENTATION',
     img: 'fermentation',
     description: 'Natural stage where wild yeasts are responsible for transforming agave honey into alcohol.'
   },
