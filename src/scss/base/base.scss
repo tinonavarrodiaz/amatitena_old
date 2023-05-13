@@ -128,3 +128,11 @@ br {
     display: block;
   }
 }
+
+img {
+  margin: 0 auto;
+
+  @include from(m) {
+    margin: unset;
+  }
+}
