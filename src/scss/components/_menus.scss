@@ -23,7 +23,7 @@
   }
 
   @include from(lg) {
-    font-size: get-vw(80px);
+    font-size: get-vw(60px);
   }
 
   &.is-active {

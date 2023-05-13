@@ -1,10 +1,11 @@
-.Experience{
-  .col-right{
+.Experience {
+  .col-right {
     padding-left: get-vw(190px);
     padding-right: get-vw(190px);
   }
-  br{
-    @include to(l){
+
+  br {
+    @include to(l) {
       display: none;
     }
   }
@@ -12,22 +13,27 @@
 }
 
 .Tour {
-  &__production{
+  &__production {
     // background-color: red;
     margin-bottom: 3em;
-    &:last-child, &:last-of-type{
+
+    &:last-child,
+    &:last-of-type {
       margin-bottom: 0;
     }
-    h2{
+
+    h2 {
       text-align: center;
       margin-bottom: 2rem;
       text-transform: uppercase;
       font-size: 1.5em;
     }
-    img{
+
+    img {
       margin-bottom: 2rem;
     }
-    p{
+
+    p {
       padding: 0 1em;
       text-align: center;
       line-height: 1;
@@ -36,30 +42,43 @@
   }
 }
 
-.Book{
+.Book {
   --color-line: rgba(0, 0, 0, .3);
-  img{
+
+  img {
     width: 30%;
     margin: 0 auto;
   }
+
   padding: 0 1em;
   text-transform: uppercase;
   background-color: #f4f4f4;
   padding-top: 2em;
   padding-bottom: 2em;
-  > p{
+
+  >p {
     margin-bottom: 2em;
+    font-family: var(--comisioner) !important;
+
+    @include from(l) {
+      font-size: get-vw(18px);
+    }
   }
-  &__form-group{
+
+  &__form-group {
     margin-bottom: 1em;
-    @include from(m){
+    font-family: var(--comisioner) !important;
+
+    @include from(m) {
       display: grid;
       grid-template-columns: auto 1fr;
       column-gap: .5em;
       margin-bottom: .5em;
     }
   }
-  input, textarea{
+
+  input,
+  textarea {
     border: none;
     border-bottom: 1px solid var(--color-line);
     background-color: transparent;
@@ -67,16 +86,19 @@
     font-family: inherit;
     font-size: 1em;
     line-height: 1.5;
-    @include from(l) {
-        font-size: get-vw(18px);
-    }
-  }
-  label{
+
     @include from(l) {
       font-size: get-vw(18px);
     }
   }
-  textarea{
+
+  label {
+    @include from(l) {
+      font-size: get-vw(18px);
+    }
+  }
+
+  textarea {
     resize: none;
     line-height: 1;
     height: 4em;
@@ -84,135 +106,264 @@
     border-bottom: none;
 
   }
-  button{
+
+  button {
     cursor: pointer;
     border: none;
     line-height: 2em;
-    padding: 0 1em 0 0em ;
+    padding: 0 1em 0 0em;
     font-weight: 700;
     background: transparent;
   }
 }
-.Book__texarea{
+
+.Book__texarea {
   position: relative;
-  label{
+
+  label {
     line-height: 1;
   }
-  &::after, ::before{
+
+  &::after,
+  ::before {
     content: '';
 
     // box-shadow: 0px 0px 0px red;
   }
-  &::after{
+
+  &::after {
     top: 5em
   }
 }
-.disclaimer{
+
+.disclaimer {
   margin: 2em auto;
   padding: 1em;
   text-align: center;
   font-size: 18px;
-  @include from(m){
+  font-family: var(--comisioner);
+
+  @include from(m) {
     margin-top: get-vw(44px);
     padding-bottom: get-vw(100px);
+    padding-right: get-vw(50px);
     text-align: right;
   }
 }
-.Tour__production{
-  @include from(m){
+
+.Tour__production {
+  @include from(m) {
     width: get-vw(1528px);
     margin: get-vh(247px) auto 0;
   }
-  img{
+
+  img {
     @include from(m) {
       width: 100%;
       margin-bottom: get-vw(100px);
     }
   }
-  h2{
+
+  h2 {
     @include from(m) {
       font-size: get-vw(82px);
       margin-bottom: get-vw(87px);
     }
   }
-  p br{
-    @include to(m){
+
+  p br {
+    @include to(m) {
       display: none;
     }
   }
-  &.Special{
+
+  &.Special {
     @include from(m) {
       margin-bottom: get-vw(170px);
     }
   }
 }
-.Book{
+
+.Book {
   @include from(m) {
     padding: get-vw(80px) get-vw(88px) get-vw(70px);
   }
-  &__grid{
+
+  &__grid {
     @include from(l) {
       display: grid;
       grid-template-columns: get-vw(1000px) 1fr;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
+    }
+  }
+
+  img {
+    // background-color: lime;
+    transform: translateY(5%);
+
+    @include from(lg) {
+      width: get-vw(380px);
+      transform: translateY(-5%) translateX(20%);
     }
   }
 }
 
-.Book__texarea{
+.Book__texarea {
 
+  --size: 4em;
   position: relative;
   font-size: 18px;
-  &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      top: 0;
-      left: 0;
-      top: 1em;
-      background-color: var(--color-line);
-      box-shadow: notepad(3, 1.4em, var(--color-line));
-      @include to(m){
-        background-color: transparent;
-      }
-      @include from(l){
-        top: 1.4em;
-        box-shadow: notepad(2, 2.3em, var(--color-line));
-      }
-      // box-shadow: 0px $space 0 $black,
-      //             0px $space*2 $black,
-      //             0px $space*3 $black;
-    }
-    textarea{
-      line-height: 1.3em;
-      @include from(l){
-        line-height: 2em;
-      }
-    }
-}
-@include from (l) {
-.Book__texarea{
-  // background-color: lightblue;
-  height: get-vw(100px);
-  margin-bottom: 0;
-  position: relative;
-  textarea{
-      position: absolute;
-      display: block;
-      height: calc(100% + 10px);
-      width: 100%;
-      top: 0;
-      left: 0;
-      line-height: 2.7em;
-      text-indent: 11vw;
-      &::first-line{
-         line-height: 1em;
-        //  position: relative;
-        // text
-      }
+  // background-color: rgba(tomato, .5);
+  font-size: 1em;
+
+  @include from(l) {
+    --size: 100px;
+    // background-color: lime;
+    height: var(--size);
   }
+
+  @include from(1700px) {
+    // background-color: aqua;
+    --size: 120px;
+    height: var(--size);
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-line);
+    top: calc((var(--size)/3) * 1.8);
+    left: 0;
+    box-shadow: notepad(2, 1.4em, var(--color-line));
+
+    @include from(l) {
+      box-shadow: notepad(2, 1em, var(--color-line));
+      // content: none;
+      top: 1em;
+    }
+  }
+
+  label {
+    @include from(l) {
+      position: relative;
+      top: .4em;
+      background-color: #f4f4f4;
+      height: 1.8em;
+      padding-right: 1em;
+      z-index: 100;
+    }
+  }
+
+  textarea {
+    // outline: 1px solid rgba(blue, .75);
+    height: var(--size);
+    line-height: calc(var(--size)/3);
+
+    @include from(l) {
+      display: block;
+      // background-color: rgba(blue, .3);
+      line-height: 2.5em;
+      position: absolute;
+      width: 100%;
+      height: var(--size);
+      left: 0;
+      top: 0;
+      text-indent: 13.5vw;
+
+      &::first-line {
+        line-height: 1.5em;
+      }
+
+    }
+  }
+
+  // &::after {
+  //   content: 'saf';
+  //   display: block;
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 1px;
+  //   // top: 0;
+  //   left: 0;
+  //   top: 1em;
+  //   background-color: var(--color-line);
+  //   background-color: blue;
+  //   // box-shadow: notepad(3, 1.4em, var(--color-line));
+
+  //   @include to(m) {
+  //     background-color: transparent;
+  //   }
+
+  //   @include from(l) {
+  //     top: 1.4em;
+  //     // box-shadow: notepad(2, 1em, var(--color-line));
+
+  //   }
+
+  //   @include from(1600px) {
+  //     top: 1.4em;
+  //     // box-shadow: notepad(2, 2.5em, var(--color-line));
+  //   }
+
+  //   // box-shadow: 0px $space 0 $black,
+  //   //             0px $space*2 $black,
+  //   //             0px $space*3 $black;
+  // }
+
+  // textarea {
+  //   line-height: 1em;
+
+  //   @include from(l) {
+  //     line-height: 2em;
+  //   }
+  // }
 }
-}
+
+// @include from (l) {
+//   .Book__texarea {
+//     // background-color: lightblue;
+//     height: get-vw(100px);
+//     margin-bottom: 0;
+//     position: relative;
+
+//     label {
+//       position: relative;
+//       z-index: 100;
+//       background-color: #f4f4f4;
+//       // background-color: lime;
+//       height: 1.6em;
+//       padding-right: .4vw;
+
+
+//     }
+
+//     textarea {
+//       position: absolute;
+//       display: block;
+//       height: calc(100% + 10px);
+//       width: 100%;
+//       top: 0;
+//       left: 0;
+//       line-height: 2.7em;
+//
+//       // background-color: lime;
+
+//       &::first-line {
+//         line-height: 1em;
+//         //  position: relative;
+//         // text
+//       }
+//     }
+//   }
+// }
+
+// @include to(1300px) {
+//   .Book__texarea label {
+//     height: 2em;
+//   }
+// }

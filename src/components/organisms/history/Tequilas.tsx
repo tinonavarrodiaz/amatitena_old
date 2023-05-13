@@ -1,5 +1,6 @@
 import React from 'react'
 import { tequilas } from '../../../utilities/tequilas'
+import Png from '../Png'
 
 const Tequilas = () => {
   return (
@@ -7,13 +8,14 @@ const Tequilas = () => {
       <h2>VERSIONS</h2>
       <div className="Tequilas__grid">
         {
-          tequilas.map((tequila,i) =>(
+          tequilas.map((tequila, i) => (
             <div key={tequila.name} className='tequila-item' data-aos="flip-left" data-aos-delay={`${i}*150`}>
-              <img src={`/img/history/${tequila.img}.png`} alt={tequila.name} />
+              {/* <img src={`/img/history/${tequila.img}.png`} alt={tequila.name} /> */}
+              <Png img={tequila.img} />
               <div className="tequila-data">
                 <h3>{tequila.name}</h3>
                 {
-                  tequila.time?(<p>{tequila.time}</p>):null
+                  tequila.time ? (<p>{tequila.time}</p>) : null
                 }
                 <p>{tequila.description} Alc. Vol.</p>
                 <div className="tequia-description">
@@ -27,7 +29,7 @@ const Tequilas = () => {
           ))
         }
       </div>
-    </article>
+    </article >
   )
 }
 

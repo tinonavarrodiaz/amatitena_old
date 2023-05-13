@@ -155,11 +155,11 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       row-gap: 2em;
-      column-gap: 10%;
+      column-gap: 2%;
     }
 
     @include from(l) {
-      padding: 0 get-vw(344px);
+      padding: 0 get-vw(280px);
       column-gap: get-vw(112px);
       row-gap: get-vw(170px);
     }
@@ -184,12 +184,16 @@
   .tequila-item {
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 10%;
-    padding: 0 1em;
+    // column-gap: 10%;
+    padding: 0 1em 0 0;
     align-items: center;
     // margin-bottom: 2em;
     // border-bottom: 1px solid #000;
     position: relative;
+
+    @include from(m) {
+      // padding-right: 0;
+    }
 
     &:after {
       content: '';
@@ -231,6 +235,7 @@
 
       @include from(l) {
         font-size: get-vw(16px);
+        padding-right: 2em;
       }
 
       span {

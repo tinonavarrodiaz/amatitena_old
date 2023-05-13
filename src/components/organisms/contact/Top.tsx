@@ -11,7 +11,7 @@ const Top = () => {
         <Link to={`/where-to-buy`} className='btn btn-read '>KNOW WHERE TO BUY</Link>
       </div>
       <div className="col-right" data-aos="fade-left">
-        <h2>WE WANT TO HEAR FROM YOU</h2>
+        <h2>WE WANT<br /> TO HEAR<br /> FROM YOU</h2>
         <p>
           Your feedback and comments are very important to us. We want to know what you think of our tequila and we will be more than happy to answer any questions you may have. Our customers are the ones who make Amatiteña a reality.
         </p>

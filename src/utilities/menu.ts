@@ -1,5 +1,9 @@
 const menu = [
   {
+    title: 'HOME',
+    link: '/',
+  },
+  {
     title: 'ABOUT US',
     link: '/about-us',
   },
