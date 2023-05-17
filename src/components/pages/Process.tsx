@@ -6,7 +6,7 @@ import Img from '../organisms/Img'
 
 const Process = () => {
   useEffect(() => {
-    const dmain: any = document.querySelector('main')
+    const dmain: any = document.querySelector('body')
     dmain.classList.add('page-home');
     const logo: any = document.getElementById('logo')
     logo.src = "/logo.svg"

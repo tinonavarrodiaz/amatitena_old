@@ -13,7 +13,7 @@ const Top = () => {
       <div className="col-right" data-aos="fade-left">
         <h2>WE WANT<br /> TO HEAR<br /> FROM YOU</h2>
         <p>
-          Your feedback and comments are very important to us. We want to know what you think of our tequila and we will be more than happy to answer any questions you may have. Our customers are the ones who make Amatiteña a reality.
+          Your feedback and comments are<br /> very important to us. We want to<br /> know what you think of our<br /> tequila and we will be more than<br /> happy to answer any questions<br /> you may have. Our customers are<br /> the ones who make Amatiteña<br /> a reality.
         </p>
       </div>
     </article>

@@ -8,7 +8,7 @@ import Bottom from '../organisms/home/Bottom';
 const Home = () => {
   useEffect(() => {
     // @ts-ignore
-    document.querySelector('main').classList.add('page-home');
+    document.querySelector('body').classList.add('page-home');
     const logo: any = document.getElementById('logo')
     logo.src = "/logo.svg"
   }, [])

@@ -53,3 +53,52 @@
     display: block;
   }
 }
+
+.main-nav {
+  // background-color: lime;
+  top: 0;
+  z-index: 5000;
+}
+
+.header-menu {
+  // background-color: antiquewhite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 17px;
+
+  @include from(l) {
+    padding: 0 var(--padding);
+
+  }
+
+  &::after {
+    content: '';
+    width: calc(100% - 4.116%);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    background-color: rgba(#000, .25);
+  }
+
+  img {
+    width: 40vw;
+    height: 8vw;
+    overflow: hidden;
+    margin: 0;
+
+    @include from(l) {
+      width: 11.97916666666667vw;
+      height: 2.34375vw;
+    }
+  }
+
+}

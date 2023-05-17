@@ -3,7 +3,7 @@ import Img2 from '../Img2'
 const path = '/img/experience'
 const Production = () => {
   return (
-    <article className='Tour__production'>
+    <article className='Tour__production prod'>
       <h2 data-aos="zoom-in">Production Process</h2>
       <Img2 img={`agave`} />
       <p data-aos="zoom-out">

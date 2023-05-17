@@ -8,25 +8,25 @@ function Header() {
   const ToggleMenuFunction = () => {
     !active ? setActive(true) : setActive(false);
   };
-  const menuHidden = ()=>{
+  const menuHidden = () => {
     setActive(false)
   }
-  useEffect(()=>{
-    if(active){
+  useEffect(() => {
+    if (active) {
       document.body.style.overflowY = "hidden";
     }
-    else{
+    else {
       document.body.style.overflowY = "auto";
     }
   })
   return (
     <>
-      <header className={`main-header ${active? 'is-active': ''}`}>
-        <Link to={'/'} className={`Header__logo ${active? 'is-active': ''}`} onClick={menuHidden}>
-          <img src={'/logo.svg'} alt="vite" id="logo"/>
+      <header className={`main-header ${active ? 'is-active' : ''}`}>
+        <Link to={'/'} className={`Header__logo ${active ? 'is-active' : ''}`} onClick={menuHidden}>
+          <img src={'/logo.svg'} alt="vite" id="logo" />
         </Link>
         {/* <nav className="main-nav"> */}
-        <Hamburgers active={active} action={ToggleMenuFunction}  />
+        <Hamburgers active={active} action={ToggleMenuFunction} />
         {/* </nav> */}
 
       </header>

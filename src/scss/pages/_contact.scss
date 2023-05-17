@@ -106,5 +106,13 @@
 
 .Contact textarea {
   // background-color: #a39384;
-  text-indent: 5.6vw !important;
+  text-indent: 5vw !important;
+}
+
+.Contact .Book__texarea label,
+.Tour .Book__texarea label {
+  background-color: #f4f4f4;
+  position: relative;
+  z-index: 100;
+  padding-right: .5em;
 }

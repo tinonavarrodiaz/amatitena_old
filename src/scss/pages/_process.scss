@@ -1,55 +1,74 @@
-.Process{
-  h1{
+.Process {
+  padding-top: 2em;
+
+  @include from(l) {
+    padding-top: get-vw(110px);
+  }
+
+  h1 {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
-    @include from(l){
-      margin-top: get-vw(107px);
+
+    @include from(l) {
+      // margin-top: get-vw(110px) !important;
       margin-bottom: get-vw(76px);
       font-size: get-vw(82px);
     }
   }
-  &__copy{
+
+  &__copy {
     padding-top: 2em;
     padding-bottom: 2em;
     text-align: center;
     padding-left: 1em;
     padding-right: 1em;
     line-height: 1.1;
-    @include from(l){
+
+    @include from(l) {
       padding-top: get-vw(125px);
       padding-bottom: get-vw(65px);
     }
-    img{
+
+    img {
       margin: 0 auto;
       width: 30%;
       margin-bottom: 1.5em;
-      @include from(m){
+
+      @include from(m) {
+        // background-color: lime;
         max-width: get-vw(210px);
       }
-      @include from(l){
-        margin-bottom: get-vw(30px);
+
+      @include from(l) {
+        // margin-bottom: get-vw(25px) !important;
+        margin-bottom: get-vw(30px) !important;
       }
     }
-    br{
-      @include to(m){
+
+    br {
+      @include to(m) {
         display: none;
       }
     }
   }
-  &__process{
+
+  &__process {
     margin: 0 2em 2em;
-    @include from(l){
+
+    @include from(l) {
       margin: 0 get-vw(195px) 2em;
     }
   }
-  &__process-item{
+
+  &__process-item {
     // background-color: lime;
     padding: 2em 2em;
-    border-top: 1px solid rgba(#000,.2);
+    border-top: 1px solid rgba(#000, .2);
     text-align: center;
     line-height: 1.1;
-    @include from(m){
+
+    @include from(m) {
       padding: 2em get-vw(60px);
       display: grid;
       grid-template-columns: auto 1fr;
@@ -57,38 +76,49 @@
       align-items: center;
       column-gap: get-vw(80px);
     }
-    img{
+
+    img {
       clip-path: var(--clip-path);
       margin: 0 auto;
       width: 100%;
     }
-    h3{
+
+    h3 {
       font-size: 1.5em;
       margin: 1rem 0;
     }
-    p{
-      @include from(l){
+
+    p {
+      font-weight: 300;
+      font-family: var(--comisioner);
+
+      @include from(l) {
         font-size: 18px;
       }
     }
   }
-  img{
+
+  img {
     width: 100%;
     margin: 0 auto;
   }
 }
-.banner-sec{
+
+.banner-sec {
   padding: 0 1.5em;
   margin-bottom: 2em;
-  @include from(l){
+
+  @include from(l) {
     padding: 0 get-vw(195px);
     margin-bottom: get-vw(130px);
-    img{
+
+    img {
       width: 100%;
     }
   }
 
 }
-.Process__desciption{
+
+.Process__desciption {
   font-family: var(--comisioner);
 }

@@ -6,7 +6,7 @@ import Banner from '../organisms/Banner'
 
 const History = () => {
   useEffect(() => {
-    const dmain: any = document.querySelector('main')
+    const dmain: any = document.querySelector('body')
     dmain.classList.remove('page-home');
     const logo: any = document.getElementById('logo')
     logo.src = "/logo-light.svg"

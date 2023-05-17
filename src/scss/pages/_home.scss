@@ -8,6 +8,7 @@
     // border-bottom: 1px solid #000;
     position: relative;
 
+
     &::after {
       content: '';
       position: absolute;
@@ -17,12 +18,12 @@
       background-color: rgba(#000, .25);
       left: 50%;
       bottom: 0;
-      transform: translateX(-50%) translateY(#{get-vw(30px)});
+      transform: translateX(-50%) translateY(#{get-vw(-10px)});
     }
 
     @include from(lg) {
       // height: get-vw(700px);
-      padding-top: get-vw(70px);
+      padding-top: get-vw(65px);
       padding-bottom: get-vw(67px);
     }
 
@@ -30,17 +31,34 @@
       font-size: 2em;
 
       @include from(lg) {
-        font-size: get-vw(80px);
+        font-size: get-vw(82px);
+        margin-top: get-vw(13px);
+        // letter-spacing: 1px;
       }
     }
 
     h3 {
       font-size: 1.3em;
       margin-bottom: 2em;
+      font-family: var(--crimson);
+      font-weight: normal;
+      margin-top: .3em;
+
+      @include from(l) {
+        font-size: get-vw(38px);
+        // letter-spacing: 7px;
+      }
     }
 
     p {
       margin-bottom: 0;
+      font-family: var(--comisioner);
+
+      @include from(lg) {
+        font-size: get-vw(18px);
+        letter-spacing: 4px;
+        transform: translateY(-5px);
+      }
     }
 
     .button-like {
@@ -48,15 +66,23 @@
       font-family: var(--comisioner);
       font-weight: 300;
       font-size: .8em;
-      line-height: 2em;
-      padding: 0 1.5em;
+      line-height: 2.5em;
+      padding: 0 1em;
       border: 1px solid rgba(#000, .3);
-      border-radius: .5em;
+      border-radius: 20px;
       margin-bottom: 2em;
       margin-top: 1em;
+      letter-spacing: 3px;
 
       @include from(lg) {
+        display: flex;
+        width: get-vw(205px);
+        margin: get-vw(20px) auto 0;
+        height: get-vw(30px);
         font-size: get-vw(12px);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
       }
     }
 
@@ -82,6 +108,7 @@
 
         p {
           font-size: get-vw(18px);
+          // background-color: lime;
         }
       }
     }
@@ -309,4 +336,17 @@
       background-color: rgba(#000, .3)
     }
   }
+}
+
+.btn-read {
+  font-family: var(--chivo);
+  font-weight: 300;
+
+  @include from(lg) {
+    font-size: get-vw(14px) !important;
+  }
+}
+
+.Home-item__description {
+  font-family: var(--comisioner);
 }

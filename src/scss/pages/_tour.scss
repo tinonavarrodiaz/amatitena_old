@@ -43,7 +43,13 @@
 }
 
 .Book {
-  --color-line: rgba(0, 0, 0, .3);
+  --color-line: rgba(0, 0, 0, .25);
+  --lh: 1.5em;
+  font-family: 14px;
+
+  @include from(l) {
+    font-size: get-vw(18px);
+  }
 
   img {
     width: 30%;
@@ -59,6 +65,7 @@
   >p {
     margin-bottom: 2em;
     font-family: var(--comisioner) !important;
+    letter-spacing: 3px;
 
     @include from(l) {
       font-size: get-vw(18px);
@@ -75,37 +82,160 @@
       column-gap: .5em;
       margin-bottom: .5em;
     }
-  }
 
-  input,
-  textarea {
-    border: none;
-    border-bottom: 1px solid var(--color-line);
-    background-color: transparent;
-    line-height: 2em;
-    font-family: inherit;
-    font-size: 1em;
-    line-height: 1.5;
-
-    @include from(l) {
-      font-size: get-vw(18px);
+    @include from(m) {
+      margin-bottom: get-vw(32px);
     }
   }
 
   label {
+    font-size: inherit !important;
+
+    @include from(l) {
+      // height: 1em !important;
+    }
+  }
+
+  input,
+  textarea {
+    line-height: 1;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    border-bottom: 1px solid var(--color-line);
+
     @include from(l) {
       font-size: get-vw(18px);
     }
   }
 
   textarea {
+    display: block;
+    height: calc(var(--lh) * 3.5);
+    // background-color: red;
     resize: none;
-    line-height: 1;
-    height: 4em;
-    background-color: transparent;
-    border-bottom: none;
-
+    line-height: var(--lh);
   }
+
+  @include to(l) {
+
+    .Book__texarea {
+      position: relative;
+
+      textarea {
+        border: none;
+      }
+
+      label {
+        align-items: flex-start !important;
+        align-items: flex-start;
+        padding-top: .4em;
+        // margin-bottom: .5em;
+
+      }
+
+      // background-color: lime;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: transparent;
+        top: 1.5em;
+        box-shadow: 0 calc(var(--lh) * 1.1) var(--color-line),
+          0 calc(var(--lh) * 2.2) var(--color-line),
+          0 calc(var(--lh) * 3.2) var(--color-line);
+        left: 0;
+      }
+
+      // textarea {
+      //   border-bottom: none;
+      //   outline: 1px solid red;
+      //   height: 3em;
+      // }
+    }
+  }
+
+  // input,
+  // textarea {
+  //   border: none;
+  //   background-color: transparent;
+  //   line-height: 2em;
+  //   font-family: inherit;
+  //   font-size: 1em;
+  //   line-height: 1.5;
+
+  //   @include from(l) {
+  //     font-size: get-vw(18px);
+  //   }
+  // }
+
+  label {
+    @include from(l) {
+      font-size: get-vw(18px);
+      display: flex;
+      align-items: flex-end;
+      line-height: 1;
+      margin: 0;
+    }
+  }
+
+  @include from(l) {
+    .Book__texarea {
+      --lh: #{get-vw(30px)};
+      --lh2: #{get-vw(50px)};
+      height: calc(var(--lh) * 4.5);
+      position: relative;
+      transform: translateY(#{get-vw(-10px)});
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: var(--color-line);
+        left: 0;
+        top: var(--lh);
+        box-shadow: 0 var(--lh2) var(--color-line);
+      }
+
+      label {
+        display: block;
+        position: relative;
+        z-index: 50;
+        height: calc(var(--lh) + 1px);
+        line-height: calc(var(--lh) + 1px);
+      }
+
+      textarea {
+        border-bottom: none;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid var(--color-line);
+        text-indent: 13vw;
+        line-height: var(--lh2);
+
+        &::first-line {
+          line-height: var(--lh);
+        }
+      }
+    }
+  }
+
+  // textarea {
+  //   resize: none;
+  //   line-height: 1;
+  //   height: 4em;
+  //   background-color: transparent;
+  //   border-bottom: none;
+
+  // }
 
   button {
     cursor: pointer;
@@ -114,6 +244,8 @@
     padding: 0 1em 0 0em;
     font-weight: 700;
     background: transparent;
+    font-family: var(--comisioner) !important;
+    font-weight: 500;
   }
 }
 
@@ -142,6 +274,7 @@
   text-align: center;
   font-size: 18px;
   font-family: var(--comisioner);
+  font-weight: 300;
 
   @include from(m) {
     margin-top: get-vw(44px);
@@ -212,117 +345,122 @@
 .Book__texarea {
 
   --size: 4em;
-  position: relative;
-  font-size: 18px;
-  // background-color: rgba(tomato, .5);
-  font-size: 1em;
-
-  @include from(l) {
-    --size: 100px;
-    // background-color: lime;
-    height: var(--size);
-  }
-
-  @include from(1700px) {
-    // background-color: aqua;
-    --size: 120px;
-    height: var(--size);
-  }
-
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: 50;
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-line);
-    top: calc((var(--size)/3) * 1.8);
-    left: 0;
-    box-shadow: notepad(2, 1.4em, var(--color-line));
-
-    @include from(l) {
-      box-shadow: notepad(2, 1em, var(--color-line));
-      // content: none;
-      top: 1em;
-    }
-  }
-
-  label {
-    @include from(l) {
-      position: relative;
-      top: .4em;
-      background-color: #f4f4f4;
-      height: 1.8em;
-      padding-right: 1em;
-      z-index: 100;
-    }
-  }
-
-  textarea {
-    // outline: 1px solid rgba(blue, .75);
-    height: var(--size);
-    line-height: calc(var(--size)/3);
-
-    @include from(l) {
-      display: block;
-      // background-color: rgba(blue, .3);
-      line-height: 2.5em;
-      position: absolute;
-      width: 100%;
-      height: var(--size);
-      left: 0;
-      top: 0;
-      text-indent: 13.5vw;
-
-      &::first-line {
-        line-height: 1.5em;
-      }
-
-    }
-  }
-
-  // &::after {
-  //   content: 'saf';
-  //   display: block;
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 1px;
-  //   // top: 0;
-  //   left: 0;
-  //   top: 1em;
-  //   background-color: var(--color-line);
-  //   background-color: blue;
-  //   // box-shadow: notepad(3, 1.4em, var(--color-line));
-
-  //   @include to(m) {
-  //     background-color: transparent;
-  //   }
-
-  //   @include from(l) {
-  //     top: 1.4em;
-  //     // box-shadow: notepad(2, 1em, var(--color-line));
-
-  //   }
-
-  //   @include from(1600px) {
-  //     top: 1.4em;
-  //     // box-shadow: notepad(2, 2.5em, var(--color-line));
-  //   }
-
-  //   // box-shadow: 0px $space 0 $black,
-  //   //             0px $space*2 $black,
-  //   //             0px $space*3 $black;
-  // }
-
-  // textarea {
-  //   line-height: 1em;
-
-  //   @include from(l) {
-  //     line-height: 2em;
-  //   }
-  // }
 }
+
+// position: relative;
+// font-size: 18px;
+// // background-color: rgba(tomato, .5);
+// font-size: 1em;
+
+// @include from(l) {
+//   --size: 100px;
+//   // background-color: lime;
+//   height: var(--size);
+// }
+
+
+
+// &:after {
+//   content: '';
+//   display: block;
+//   position: absolute;
+//   z-index: 50;
+//   width: 100%;
+//   height: 1px;
+//   background-color: var(--color-line);
+//   top: calc((var(--size)/3) * 1.8);
+//   left: 0;
+//   box-shadow: notepad(2, 1.4em, var(--color-line));
+
+//   @include from(l) {
+//     box-shadow: notepad(2, 1em, var(--color-line));
+//     // content: none;
+//     top: 1em;
+//   }
+// }
+
+// }
+
+// label {
+//   @include from(l) {
+//     position: relative;
+//     top: .4em;
+//     background-color: #f4f4f4;
+//     height: 1.8em;
+//     padding-right: 1em;
+//     z-index: 100;
+//   }
+// }
+
+// textarea {
+//   // outline: 1px solid rgba(blue, .75);
+//   height: var(--size);
+//   line-height: calc(var(--size)/3);
+
+//   @include from(l) {
+//     display: block;
+//     // background-color: rgba(blue, .3);
+//     line-height: 2.5em;
+//     position: absolute;
+//     width: 100%;
+//     height: var(--size);
+//     left: 0;
+//     top: 0;
+//     text-indent: 13.5vw;
+
+//     &::first-line {
+//       line-height: 1.5em;
+//     }
+
+//   }
+// }
+
+
+
+
+
+
+// &::after {
+//   content: 'saf';
+//   display: block;
+//   position: absolute;
+//   width: 100%;
+//   height: 1px;
+//   // top: 0;
+//   left: 0;
+//   top: 1em;
+//   background-color: var(--color-line);
+//   background-color: blue;
+//   // box-shadow: notepad(3, 1.4em, var(--color-line));
+
+//   @include to(m) {
+//     background-color: transparent;
+//   }
+
+//   @include from(l) {
+//     top: 1.4em;
+//     // box-shadow: notepad(2, 1em, var(--color-line));
+
+//   }
+
+//   @include from(1600px) {
+//     top: 1.4em;
+//     // box-shadow: notepad(2, 2.5em, var(--color-line));
+//   }
+
+//   // box-shadow: 0px $space 0 $black,
+//   //             0px $space*2 $black,
+//   //             0px $space*3 $black;
+// }
+
+// textarea {
+//   line-height: 1em;
+
+//   @include from(l) {
+//     line-height: 2em;
+//   }
+// }
+// }
 
 // @include from (l) {
 //   .Book__texarea {

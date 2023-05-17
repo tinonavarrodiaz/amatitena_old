@@ -29,6 +29,7 @@
   a {
     display: block;
     text-align: center;
+    // text-transform: capitalize;
   }
 
   @include from(m) {

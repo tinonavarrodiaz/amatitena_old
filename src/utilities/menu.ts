@@ -1,28 +1,29 @@
 const menu = [
   {
-    title: 'HOME',
+    title: 'Home',
     link: '/',
   },
   {
-    title: 'ABOUT US',
+    title: 'About Us',
     link: '/about-us',
   },
   {
-    title: 'PROCESS',
+    title: 'Process',
     link: '/process',
   },
   {
-    title: 'WHERE TO BUY',
+    title: 'Where to Buy',
     link: '/where-to-buy',
   },
   {
-    title: 'TOURS',
+    title: 'Tours',
     link: '/tours',
   },
   {
-    title: 'CONTACT',
+    title: 'Contact',
     link: '/contact',
   },
+
 ];
 
 export default menu;

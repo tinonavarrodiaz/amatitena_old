@@ -136,4 +136,14 @@
 
 .main-menu a {
   font-family: var(--crimson);
+  text-transform: uppercase;
+}
+
+.main-nav .hamburger {
+  display: block;
+
+  // opacity: ;
+  @include from(l) {
+    transform: translateX(-30%) translateY(-5%)
+  }
 }
