@@ -19,7 +19,7 @@ const Process = () => {
       <Banner img='banner3' />
       <Copy />
       <ProcessOrg />
-      <div className="banner-sec" data-aos="flip-left">
+      <div className="banner-sec" data-aos="zoom-in">
         <Img img="banner2" />
       </div>
       <img src="img/agave-left.png" alt="Agave" className='Agave-float Agave-float-left' />

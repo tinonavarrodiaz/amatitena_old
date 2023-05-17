@@ -195,8 +195,8 @@
   @include from(l) {
     .Book__texarea {
       --lh: #{get-vw(30px)};
-      --lh2: #{get-vw(50px)};
-      height: calc(var(--lh) * 4.5);
+      --lh2: #{get-vw(57px)};
+      height: calc(var(--lh) * 4.9);
       position: relative;
       transform: translateY(#{get-vw(-10px)});
 
@@ -208,7 +208,7 @@
         height: 1px;
         background: var(--color-line);
         left: 0;
-        top: var(--lh);
+        top: calc(var(--lh) - 4px);
         box-shadow: 0 var(--lh2) var(--color-line);
       }
 
@@ -256,6 +256,7 @@
     font-family: var(--comisioner) !important;
     font-weight: 500;
     letter-spacing: 2px;
+    font-size: get-vw(18px);
   }
 }
 
@@ -355,6 +356,34 @@
 .Book__texarea {
 
   --size: 4em;
+}
+
+.Contact .Book__texarea {
+  --lh2: #{get-vw(52px)};
+  height: calc(var(--lh) * 4.4);
+  transform-origin: center;
+
+  // transform: translateY(#{get-vw(-0px)});
+
+}
+
+.Contact textarea {
+  // background-color: lime;
+  display: block;
+  transform: translateY(#{get-vw(-3px)});
+}
+
+.Tour .Book__texarea {
+  // background: lime;
+  transform: translateY(#{get-vw(0px)});
+}
+
+.Tour button {
+  transform: translateY(#{get-vw(15px)});
+}
+
+.Contact button {
+  transform: translateY(#{get-vw(0px)});
 }
 
 // position: relative;

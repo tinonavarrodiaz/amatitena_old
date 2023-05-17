@@ -342,3 +342,9 @@
     margin-bottom: .1em;
   }
 }
+
+.btn.btn-read {
+  @include from(l) {
+    font-size: get-vw(16px) !important;
+  }
+}

@@ -20,7 +20,7 @@ const Book = () => {
           </div>
           <div className="Book__form-group">
             <label htmlFor="people">number of people:</label>
-            <input type="number" name="people" id="people" />
+            <input type="text" name="people" id="people" />
           </div>
           <div className="Book__form-group">
             <label htmlFor="language">language:</label>

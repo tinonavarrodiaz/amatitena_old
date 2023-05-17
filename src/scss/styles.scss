@@ -50,182 +50,184 @@ $legacy : true; // Soporte para versiones antiguas
 @import "components/header";
 @import "components/footer";
 
-@import "pages/pages";
-@import "pages/home";
-@import "pages/about";
-@import "pages/process";
-@import "pages/tour";
-@import "pages/contact";
-@import "pages/where-to-buy";
+@include from(l) {
+  @import "pages/pages";
+  @import "pages/home";
+  @import "pages/about";
+  @import "pages/process";
+  @import "pages/tour";
+  @import "pages/contact";
+  @import "pages/where-to-buy";
 
 
-// Utilities (hacks)
-// Todos los hacks que hayas necesitado para solucionar conflictos
-// o resolver situaciones extremas. Se espera poder mejorarlos luego.
-@import "hacks/hacks";
+  // Utilities (hacks)
+  // Todos los hacks que hayas necesitado para solucionar conflictos
+  // o resolver situaciones extremas. Se espera poder mejorarlos luego.
+  @import "hacks/hacks";
 
-.History>img {
-  @include from(l) {
-    margin-bottom: get-vw(80px);
+  .History>img {
+    @include from(l) {
+      margin-bottom: get-vw(80px);
+    }
   }
-}
 
-body:not(.page-home) {
-  header {
+  body:not(.page-home) {
+    header {
 
+      // background-color: lime;
+      &::after {
+        background: linear-gradient(to right, rgba(#fff, .25) 50.4%, rgba(#000, .25) 50.4%);
+      }
+    }
+  }
+
+  .mt-menor {
+    @include from(lg) {
+      padding-top: get-vw(0px) !important;
+    }
+
+    p {
+      // color: red !important;
+      font-weight: var(--comisioner) !important;
+      font-weight: 300 !important;
+    }
+  }
+
+  .text-text {
     // background-color: lime;
-    &::after {
-      background: linear-gradient(to right, rgba(#fff, .25) 50.4%, rgba(#000, .25) 50.4%);
-    }
-  }
-}
-
-.mt-menor {
-  @include from(lg) {
-    padding-top: get-vw(0px) !important;
+    font-family: var(--crimson);
   }
 
-  p {
-    // color: red !important;
-    font-weight: var(--comisioner) !important;
-    font-weight: 300 !important;
-  }
-}
-
-.text-text {
-  // background-color: lime;
-  font-family: var(--crimson);
-}
-
-.Tour__production.prod {
-  // background-color: lightblue;
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    display: block;
-    bottom: -2em;
-    left: 0;
-    height: 1px;
-    width: 100%;
-    background-color: rgba(#000, .25);
-    ;
-
-    @include from(l) {
-      bottom: get-vw(-70px);
-    }
-  }
-}
-
-.Special {
-  margin-top: get-vw(357px);
-}
-
-html,
-body,
-main {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-.Contact__form form {
-  >p {
-    margin-bottom: 2em;
-    font-family: var(--comisioner) !important;
-    letter-spacing: 3px;
-
-    @include from(l) {
-      font-size: get-vw(18px);
-      margin-bottom: get-vw(87px);
-    }
-  }
-}
-
-.page-home .main-header {
-  position: relative;
-
-}
-
-body:not(.page-home) .main-header {
-  @include to(l) {
-    // background-color: #fff !important;
+  .Tour__production.prod {
+    // background-color: lightblue;
+    position: relative;
 
     &::after {
-      @include to(lg) {
-        content: unset;
-        background-color: #fff !important;
-        ;
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: -2em;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: rgba(#000, .25);
+      ;
+
+      @include from(l) {
+        bottom: get-vw(-70px);
+      }
+    }
+  }
+
+  .Special {
+    margin-top: get-vw(357px);
+  }
+
+  html,
+  body,
+  main {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .Contact__form form {
+    >p {
+      margin-bottom: 2em;
+      font-family: var(--comisioner) !important;
+      letter-spacing: 3px;
+
+      @include from(l) {
+        font-size: get-vw(18px);
+        margin-bottom: get-vw(87px);
+      }
+    }
+  }
+
+  .page-home .main-header {
+    position: relative;
+
+  }
+
+  body:not(.page-home) .main-header {
+    @include to(l) {
+      // background-color: #fff !important;
+
+      &::after {
+        @include to(lg) {
+          content: unset;
+          background-color: #fff !important;
+          ;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 90%;
+        height: 1px;
+        background-color: rgba(#fff, .3);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .Process__copy img {
+    @include to(m) {
+      max-width: 30%;
+      margin-bottom: 1em;
+    }
+  }
+
+  .banner img {
+    width: 100% !important;
+  }
+
+  .Process__process-item {
+    img {
+      max-width: 60%;
+
+      @include from(l) {
+        width: get-vw(300px);
       }
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 90%;
-      height: 1px;
-      background-color: rgba(#fff, .3);
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-}
-
-.Process__copy img {
-  @include to(m) {
-    max-width: 30%;
-    margin-bottom: 1em;
-  }
-}
-
-.banner img {
-  width: 100% !important;
-}
-
-.Process__process-item {
-  img {
-    max-width: 60%;
-
-    @include from(l) {
-      width: get-vw(300px);
+    h3 {
+      margin-top: 0;
     }
   }
 
-  h3 {
-    margin-top: 0;
-  }
-}
-
-.button-like {
-  @include to(l) {
-    transform-origin: center;
-    transform: scale(.6);
-  }
-}
-
-.Home-item__grid img {
-  @include to(m) {
-    width: 40%;
-    max-width: 250px;
+  .button-like {
+    @include to(l) {
+      transform-origin: center;
+      transform: scale(.6);
+    }
   }
 
-  @include to(l) {
-    // width: 40%;
-    max-width: 200px;
-  }
-}
-
-.Home-item__text {
-  @include fromTo(l, 1500px) {
-
-    h2 {
-      margin-bottom: .2em;
+  .Home-item__grid img {
+    @include to(m) {
+      width: 40%;
+      max-width: 250px;
     }
 
-    img {
-      margin-top: .3em;
+    @include to(l) {
+      // width: 40%;
+      max-width: 200px;
+    }
+  }
+
+  .Home-item__text {
+    @include fromTo(l, 1500px) {
+
+      h2 {
+        margin-bottom: .2em;
+      }
+
+      img {
+        margin-top: .3em;
+      }
     }
   }
 }
