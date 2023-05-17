@@ -6,7 +6,7 @@ const Top = () => {
   return (
     <article className='Origin Contact__top dgrid col-2'>
       <div className="col-left img-container-color brown" data-aos="fade-right">
-        <Img img="botella1" />
+        <Img img="botella" />
         <p>The goal is to be all over the world,<br /> sharing our traditions.</p>
         <Link to={`/where-to-buy`} className='btn btn-read '>KNOW WHERE TO BUY</Link>
       </div>

@@ -179,3 +179,53 @@ body:not(.page-home) .main-header {
     margin-bottom: 1em;
   }
 }
+
+.banner img {
+  width: 100% !important;
+}
+
+.Process__process-item {
+  img {
+    max-width: 60%;
+
+    @include from(l) {
+      width: get-vw(300px);
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.button-like {
+  @include to(l) {
+    transform-origin: center;
+    transform: scale(.6);
+  }
+}
+
+.Home-item__grid img {
+  @include to(m) {
+    width: 40%;
+    max-width: 250px;
+  }
+
+  @include to(l) {
+    // width: 40%;
+    max-width: 200px;
+  }
+}
+
+.Home-item__text {
+  @include fromTo(l, 1500px) {
+
+    h2 {
+      margin-bottom: .2em;
+    }
+
+    img {
+      margin-top: .3em;
+    }
+  }
+}

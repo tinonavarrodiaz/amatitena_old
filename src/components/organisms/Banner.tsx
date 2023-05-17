@@ -7,10 +7,11 @@ const Banner = ({ img }: Props) => {
   return (
     <article className='banner' data-aos='zoom-in-down'>
       <picture>
-        <source media="(min-width: 2200px)" srcSet={`/nuevas/${img}.jpg`} />
-        <source media="(min-width: 1024px)" srcSet={`/nuevas/large/${img}-l.jpg`} />
-        <source media="(max-width: 100px)" srcSet={`/nuevas/small/${img}-s.jpg`} />
-        <img src={`/nuevas/large/${img}-l.jpg`} alt="img" />
+        <source media="(min-width: 1921px)" srcSet={`/opti/${img}.webp`} type="image/webp" />
+        <source media="(min-width: 1921px)" srcSet={`/opti/${img}.jpg`} />
+        <source media="(max-width: 1920px)" srcSet={`/opti/${img}@1920.webp`} />
+        <source media="(max-width: 1920px)" srcSet={`/opti/${img}@1920.jpg`} type="image/webp" />
+        <img src={`/opti/${img}.jpg`} alt="img" />
       </picture>
     </article>
   )

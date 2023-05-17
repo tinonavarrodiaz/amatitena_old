@@ -1,7 +1,7 @@
 export const items = [
   {
     title: 'DISTINCTIVE HISTORY',
-    img: 'botella',
+    img: 'botella1',
     description: 'Our products are crafted under N0M 1477. The brand is inspired by Amatitán, which means small town of Amates, where the cultivation of agave was adopted since the 18th century, due to its long tradition in growing blue agave for the production of the spirit drink now known as Tequila.',
     link: '/history'
   },

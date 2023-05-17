@@ -11,6 +11,7 @@ const History = () => {
     const logo: any = document.getElementById('logo')
     logo.src = "/logo-light.svg"
     console.log(logo)
+    window.scrollTo(0, 0)
   }, [])
   return (
     <section className="page History">

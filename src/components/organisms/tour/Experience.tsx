@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Img from '../Img'
 const path = '/img/experience'
 const Experience = () => {
   return (
     <article className='Origin Experience dgrid col-2'>
       <div className="col-left mt-menor img-container-color olive" data-aos="fade-right">
-        <img src={`${path}/hornos.jpg`} alt="hornos" />
+        <Img img={`hornos`} />
         <p>Explore every step of the making of our tequila.
         </p>
         <Link to={`/process`} className='btn btn-read '>KNOW OUR PROCESS</Link>
