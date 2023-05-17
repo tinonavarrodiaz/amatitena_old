@@ -230,4 +230,10 @@ $legacy : true; // Soporte para versiones antiguas
       }
     }
   }
+
+  .Origin .col-left p {
+    // background-color: lime !important;
+    font-size: get-vh(20px) !important;
+    line-height: 1.1;
+  }
 }
