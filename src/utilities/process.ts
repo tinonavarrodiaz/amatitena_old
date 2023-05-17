@@ -20,7 +20,7 @@ export const process = [
     description: 'Natural stage where wild yeasts are responsible for transforming agave honey into alcohol.'
   },
   {
-    name: 'DESTILLATION',
+    name: 'DISTILLATION',
     img: 'destillation',
     description: 'We distill twice in slow-fire copper stills, with perfect geometry and continuous attention to the process, and expertise to give personality to our tequila.'
   },

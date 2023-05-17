@@ -8,7 +8,7 @@ const Find = () => {
       var a = document.createElement('script');
       a.type = 'text/javascript';
       a.async = !0;
-      a.src = 'https://cdn.storepoint.co/api/v1/js/162223c3f8333d.js';
+      a.src = 'https://cdn.storepoint.co/api/v1/js/1614231f12fddd.js';
       var b = document.getElementsByTagName('script')[0];
       b.parentNode.insertBefore(a, b);
     })();

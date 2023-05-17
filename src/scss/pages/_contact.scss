@@ -69,7 +69,8 @@
 
     textarea {
       @include from(l) {
-        text-indent: 4.5vw !important;
+        // background: lime;
+        // text-indent: 20.5vw !important;
 
       }
     }
@@ -106,7 +107,7 @@
 
 .Contact textarea {
   // background-color: #a39384;
-  text-indent: 5vw !important;
+  text-indent: 6.1vw !important;
 }
 
 .Contact .Book__texarea label,
@@ -115,4 +116,18 @@
   position: relative;
   z-index: 100;
   padding-right: .5em;
+}
+
+.Contact {
+  @include to(l) {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .map {
+    @include to(l) {
+      height: 300px;
+      margin-top: 2em;
+    }
+  }
 }

@@ -106,10 +106,10 @@
     width: get-vw(480px);
     height: auto;
     margin: 0 auto;
-    margin-bottom: 1rem;
+    margin-bottom: get-vw(35px);
 
-    @include to(m) {
-      margin-bottom: get-vw(35px);
+    @include to(l) {
+      margin-bottom: 1em;
       width: 60%;
     }
   }
@@ -139,6 +139,7 @@
     bottom: get-vw(50px);
     color: white;
     display: inline-block;
+    letter-spacing: 3px;
 
     @include to(m) {
       font-size: .5em;
@@ -148,7 +149,6 @@
 
     @include from(l) {
       font-size: get-vw(14px);
-
     }
 
     &::before {
@@ -285,7 +285,7 @@
       }
 
       span {
-        font-weight: 400;
+        font-weight: 500;
         margin-right: .5em;
         text-transform: uppercase;
       }
@@ -335,4 +335,10 @@
 
 .History {
   margin-bottom: get-vw(90px);
+}
+
+.tequila-data {
+  h3 {
+    margin-bottom: .1em;
+  }
 }

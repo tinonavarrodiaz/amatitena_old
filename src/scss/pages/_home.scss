@@ -76,7 +76,7 @@
 
       @include from(lg) {
         display: flex;
-        width: get-vw(205px);
+        width: get-vw(250px);
         margin: get-vw(20px) auto 0;
         height: get-vw(30px);
         font-size: get-vw(12px);
@@ -226,6 +226,7 @@
   &__img {
     width: 80%;
     margin: 0 auto 1em;
+    // opacity: .3;
 
     // max-width: 30%;
     @include from(m) {
@@ -341,6 +342,7 @@
 .btn-read {
   font-family: var(--chivo);
   font-weight: 300;
+  letter-spacing: 2px;
 
   @include from(lg) {
     font-size: get-vw(14px) !important;
@@ -349,4 +351,21 @@
 
 .Home-item__description {
   font-family: var(--comisioner);
+}
+
+.Home-item__signature {
+  margin-top: .5em;
+}
+
+.Home-item__text {
+  @include to(l) {
+    margin-top: 1em;
+  }
+}
+
+.Home-item__grid {
+  @include to(l) {
+    // background-color: lightblue;
+    padding-bottom: 1em;
+  }
 }
