@@ -26,9 +26,9 @@ const AppTemplate = () => {
   return (
     <>
       <Header />
-      <main>
+      {/* <main> */}
         <Outlet />
-      </main>
+      {/* </main> */}
       <Footer />
     </>
   )

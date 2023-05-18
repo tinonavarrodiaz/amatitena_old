@@ -12,8 +12,7 @@ const Special = () => {
       </p>
       <p data-aos="zoom-out">
         $800 MXN per person<br />
-        Duration: 3 hour<br />
-        Prior reservation required.
+        Duration: 3 hour<br />  prior reservation required.
       </p>
     </article>
   )

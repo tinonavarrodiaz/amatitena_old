@@ -17,7 +17,7 @@ const Tequilas = () => {
                 {
                   tequila.time ? (<p>{tequila.time}</p>) : null
                 }
-                <p>{tequila.description} Alc. Vol.</p>
+                <p className='Tequila__vol'>{tequila.description} Alc. Vol.</p>
                 <div className="tequia-description">
                   <p><span>Color: </span>{tequila.color}</p>
                   <p><span>Aroma: </span>{tequila.aroma}</p>

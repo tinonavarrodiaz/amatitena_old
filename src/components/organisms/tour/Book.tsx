@@ -36,7 +36,9 @@ const Book = () => {
           </div>
           <button type='submit'>SEND</button>
         </form>
+        <div className="Book__img-cont">
         <img src={`/img/home/distiller.svg`} className="distiller" alt="distiller" />
+        </div>
       </div>
 
     </article>

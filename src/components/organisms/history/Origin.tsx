@@ -4,7 +4,7 @@ import Img from '../Img'
 // const path = '/img/history'
 const Origin = () => {
   return (
-    <article className='Origin dgrid col-2' >
+     <article className='Origin dgrid col-2' >
       <div className="col-left img-container-color gray" data-aos="fade-right">
         {/* <img src={`${path}/girl.jpg`} alt="girl" /> */}
         <Img img="girl" />
