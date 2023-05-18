@@ -19,7 +19,7 @@ const AppTemplate = () => {
       duration: 1250,
       startEvent: 'DOMContentLoaded',
       useClassNames: true,
-      offset: 250,
+      // offset: 250,
       // once: true,
     });
   }, []);
