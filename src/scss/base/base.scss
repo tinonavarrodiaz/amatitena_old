@@ -14,6 +14,7 @@ body {
   font-size: 17px;
   width: 100vw;
   overflow-x: hidden;
+  // overflow-y: hidden !important;
 
   @include from(m) {
     font-size: get-vw(38px);
@@ -22,7 +23,14 @@ body {
   // max-width: 100vw;
   // overflow-x: hidden;
 }
-
+html,body,main{
+  overflow-y: auto !important;
+}
+html.hidden,
+body.hidden,
+main.hidden{
+  overflow-y: hidden !important;
+}
 img {
   display: block;
   max-width: 100%;

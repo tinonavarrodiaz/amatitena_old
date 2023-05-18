@@ -1,7 +1,9 @@
-.page-home header{
+.page-home header {
   position: relative;
 }
+
 body:not(.page-home) {
+
   .hamburger-inner,
   .hamburger-inner::after,
   .hamburger-inner::before {
@@ -16,8 +18,9 @@ body:not(.page-home) {
       background-color: #fff;
     }
   }
- header::after{
-    background-color: rgba(#fff,.3);
+
+  header::after {
+    background-color: rgba(#fff, .3);
   }
 }
 
@@ -26,7 +29,8 @@ body:not(.page-home) nav {
   .hamburger-inner,
   .hamburger-inner::after,
   .hamburger-inner::before {
-    background-color: var(--font-color);;
+    background-color: var(--font-color);
+    ;
   }
 
   .hamburger.is-active {
@@ -34,7 +38,8 @@ body:not(.page-home) nav {
     .hamburger-inner,
     .hamburger-inner::after,
     .hamburger-inner::before {
-      background-color: var(--font-color);;
+      background-color: var(--font-color);
+      ;
     }
   }
 
@@ -42,10 +47,12 @@ body:not(.page-home) nav {
     background-color: rgba(#fff, .3);
   }
 }
+
 .page {
-  body.page-home &{
+  body.page-home & {
     padding-top: 2rem;
   }
+
   h1 {
     font-size: 1.8em;
     margin-bottom: .5rem;
@@ -85,37 +92,46 @@ body:not(.page-home) nav {
   //   background-color: lightblue;
   // }
 }
-.distinctive-history{
+
+.distinctive-history {
   padding-top: 2em;
   padding-left: var(--padding);
   padding-right: var(--padding);
-  p{
+
+  p {
     font-family: var(--crimson) !important;
     font-size: 16px !important;
   }
-  img{
+
+  img {
     width: 30%;
     margin: 0 auto 1em;
   }
 }
-.distinctive-history{
+
+.distinctive-history {
   margin-bottom: 3em;
 }
-.distinctive-history__text{
+
+.distinctive-history__text {
   margin-bottom: 2em;
 }
-.Home-item__grid{
-  img{
+
+.Home-item__grid {
+  img {
     width: 60%;
   }
-  h2{
+
+  h2 {
     margin-top: 1em !important;
     margin-bottom: 1em !important;
   }
-  p{
+
+  p {
     font-family: var(--comisioner) !important;
   }
-  .btn-read{
+
+  .btn-read {
     margin: 0 auto !important;
     margin-bottom: 2rem !important;
     display: table;
@@ -125,204 +141,249 @@ body:not(.page-home) nav {
     text-decoration: underline;
   }
 }
-.Home__bottom{
+
+.Home__bottom {
   margin-top: 3rem;
   margin-bottom: 3rem;
   padding: 0 var(--padding);
-  img{
+
+  img {
     margin: 0 auto 2rem;
     width: 40%;
   }
 }
-.Agave-float{
+
+.Agave-float {
   display: none;
 }
-.col-left.img-container-color{
+
+.col-left.img-container-color {
   background-color: #726d65;
   padding-top: calc(var(--header-height) + 2rem);
   padding-bottom: 1rem;
   margin-bottom: 2rem;
   color: #fff;
-  &.olive{
+
+  &.olive {
     background-color: #707064;
   }
-  &.brown{
+
+  &.brown {
     background-color: #a39384;
   }
-  img{
+
+  img {
     // opacity: .3;
     width: 60% !important;
   }
-  p{
+
+  p {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-  a{
+
+  a {
     display: block;
     text-decoration: underline;
     text-align: center;
   }
 }
-.col-right{
-  h2{
+
+.col-right {
+  h2 {
     margin-bottom: 1em !important;
     font-size: 1.5em;
     padding: 0 2em;
   }
-  p{
+
+  p {
     padding: 0 var(--padding);
   }
+
   margin-bottom: 2rem;
 }
-.Tequilas{
+
+.Tequilas {
   padding: 0 var(--padding);
   margin-bottom: 3em;
-  h2{
+
+  h2 {
     margin-bottom: 1em !important;
     font-size: 1.5em;
     padding: 0 2em;
   }
-  img{
+
+  img {
     width: 40%;
     margin-bottom: .2em;
   }
 }
-.tequila-data{
-  h3{
+
+.tequila-data {
+  h3 {
     font-size: 1.2em;
     margin-bottom: .3em;
   }
 }
-.tequia-description{
+
+.tequia-description {
   margin-top: 2em;
   padding-left: 2em;
   padding-right: 2em;
-  p{
+
+  p {
     margin-bottom: 0;
   }
-  span{
+
+  span {
     font-weight: 500;
   }
 }
-.tequila-item{
+
+.tequila-item {
   margin-bottom: 1.5em;
   position: relative;
-  &::after{
+
+  &::after {
     content: '';
     display: block;
     position: absolute;
     width: 90%;
     height: 1px;
-    background-color: rgba(#000,.3);
+    background-color: rgba(#000, .3);
     bottom: -1.1em;
     left: 50%;
     transform: translateX(-50%);
   }
 }
-.Production
-{
+
+.Production {
   padding: 0 var(--padding);
-  img{
+
+  img {
     width: 20%;
     margin-bottom: 2em;
   }
 }
-.page.History{
+
+.page.History {
   margin-bottom: -5em !important;
 }
-.Process{
-  h1{
+
+.Process {
+  h1 {
     padding: var(--padding);
   }
-  &__copy{
+
+  &__copy {
     margin: 2em 0;
     padding: 0 var(--padding);
-    img{
+
+    img {
       width: 30%;
       margin-bottom: 1em;
     }
   }
 }
 
-.Process__process{
-  img{
+.Process__process {
+  img {
     width: 40%;
     margin-bottom: 1em;
   }
-  h3{
+
+  h3 {
     font-size: 1.3em;
     margin-bottom: 1rem;
   }
-  &-item{
+
+  &-item {
     margin-bottom: 2em;
   }
 }
-.Process{
+
+.Process {
   margin-bottom: 3em;
 }
+
 .WhereToBuy {
   h2 {
     padding: var(--padding);
     font-size: 2em;
   }
-  &__copy{
+
+  &__copy {
     margin-top: 2em;
     margin-bottom: 3rem;
     padding: 0 var(--padding);
-    img{
+
+    img {
       width: 20%;
       margin-bottom: 1em;
     }
   }
-  &__find{
+
+  &__find {
     padding-left: 1em;
     padding-right: 1em;
     margin-bottom: 2em;
   }
 }
-.Tour{
-  h2, h1 {
+
+.Tour {
+
+  h2,
+  h1 {
     padding: var(--padding);
     font-size: 2em;
     text-transform: uppercase;
   }
-  h2{
+
+  h2 {
     margin-bottom: 0rem !important;
   }
 }
-.Tour__production{
 
-  img{
+.Tour__production {
+
+  img {
     margin-bottom: 2em;
   }
-  p{
+
+  p {
     padding: 0 var(--padding);
   }
 }
-.Book{
+
+.Book {
   --lh: 3em;
   margin-top: 2rem;
   padding: 0 var(--padding);
 
-  p{
+  p {
     font-size: 1.2em;
   }
+
   text-transform: uppercase;
-  form{
+
+  form {
     font-family: var(--comisioner);
     margin-bottom: 2rem;
   }
-  input{
+
+  input {
     border: none;
-    border-bottom: 1px solid rgba(#000,.3);
+    border-bottom: 1px solid rgba(#000, .3);
     background-color: transparent;
     line-height: --lh;
     font-family: inherit;
   }
-  &__form-group{
+
+  &__form-group {
     margin-bottom: 1em;
   }
-  textarea{
+
+  textarea {
     font-family: inherit;
     border: none;
     border-bottom: 1px solid rgba(#000, .3);
@@ -331,26 +392,30 @@ body:not(.page-home) nav {
     height: calc(var(--lh) * 3 + 3px);
     line-height: calc(var(--lh) - 0px);
   }
-  &__texarea{
+
+  &__texarea {
     position: relative;
+
     // background-color: lightcyan;
-    &::after{
+    &::after {
       content: '';
       position: absolute;
       display: block;
       color: '';
       width: 100%;
-      height: 1px ;
+      height: 1px;
       background-color: rgba(#000, .3);
       top: calc(var(--lh) + 0.25em);
-      box-shadow: 0 calc(var(--lh) - 2px) rgba(#000,.3);
+      box-shadow: 0 calc(var(--lh) - 2px) rgba(#000, .3);
     }
   }
-  label{
+
+  label {
     letter-spacing: 3px;
     font-size: 13px !important;
   }
-  button{
+
+  button {
     line-height: 1em;
     font-weight: 500;
     border: none;
@@ -360,26 +425,31 @@ body:not(.page-home) nav {
     font-size: 16px;
     background-color: transparent;
   }
-  img{
+
+  img {
     width: 30%;
     margin-bottom: 2em;
   }
 }
-.Book{
+
+.Book {
   background-color: #fff;
   padding-top: 1em;
   padding-bottom: 1em;
   margin-bottom: 1em;
 }
-.disclaimer{
+
+.disclaimer {
   padding: 0 var(--padding);
   margin-bottom: 2em;
   font-family: var(--comisioner);
 }
-.prod{
+
+.prod {
   margin-bottom: 4rem;
   position: relative;
-  &::after{
+
+  &::after {
     content: '';
     position: absolute;
     display: block;
@@ -388,36 +458,49 @@ body:not(.page-home) nav {
     bottom: -2em;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(#000,.3);
+    background-color: rgba(#000, .3);
     // background-color: red;
   }
 }
-.main-footer a{
+
+.main-footer a {
   font-family: var(--comisioner);
 }
-.Contact{
-  h2{
+
+.Contact {
+  h2 {
     font-size: 2em;
     margin-bottom: rem;
   }
-  .Book__grid{
+
+  .Book__grid {
     margin-top: 2rem;
-    p{
+
+    p {
       font-size: 1rem;
       margin-bottom: 1.5em;
     }
   }
-  .map{
+
+  .map {
     height: 300px;
     position: relative;
     margin-bottom: 3em;
-    iframe{
+
+    iframe {
       position: absolute;
       width: 100%;
       height: 100%;
     }
   }
 }
-img{
+
+img {
   margin: 0 auto;
+}
+.menu-social{
+  transform: translateY(-150%);
+}
+.main-menu{
+  transform: translateY(-5%);
 }

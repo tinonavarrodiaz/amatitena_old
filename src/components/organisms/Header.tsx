@@ -14,9 +14,15 @@ function Header() {
   useEffect(() => {
     if (active) {
       document.body.style.overflowY = "hidden";
+      document.querySelector('main').classList.add('hidden')
+      document.documentElement.classList.add('hidden')
+      document.body.classList.add('hidden')
     }
     else {
       document.body.style.overflowY = "auto";
+      document.querySelector('main').classList.remove('hidden')
+      document.documentElement.classList.remove('hidden')
+      document.body.classList.remove('hidden')
     }
   })
   return (
