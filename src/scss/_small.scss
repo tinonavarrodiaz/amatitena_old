@@ -137,12 +137,18 @@ body:not(.page-home) nav {
 .Agave-float{
   display: none;
 }
-.col-left{
+.col-left.img-container-color{
   background-color: #726d65;
   padding-top: calc(var(--header-height) + 2rem);
   padding-bottom: 1rem;
   margin-bottom: 2rem;
   color: #fff;
+  &.olive{
+    background-color: #707064;
+  }
+  &.brown{
+    background-color: #a39384;
+  }
   img{
     // opacity: .3;
     width: 60% !important;
@@ -342,7 +348,7 @@ body:not(.page-home) nav {
   }
   label{
     letter-spacing: 3px;
-    font-size: 13px;
+    font-size: 13px !important;
   }
   button{
     line-height: 1em;
@@ -411,4 +417,7 @@ body:not(.page-home) nav {
       height: 100%;
     }
   }
+}
+img{
+  margin: 0 auto;
 }
