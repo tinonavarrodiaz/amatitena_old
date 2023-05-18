@@ -142,8 +142,11 @@ body:not(.page-home) nav {
     margin-top: 1em !important;
   }
 }
+.Home .banner{
+  margin-top: -3em !important;
+}
 .Home-item__grid {
-  margin-bottom: 0em;
+  margin-bottom: 3em;
   position: relative;
   &::before {
       content: '';
@@ -158,6 +161,7 @@ body:not(.page-home) nav {
     }
     &:last-child::before{
       display: none;
+      margin-bottom: 0 !important;
     }
   img {
     width: 60%;
