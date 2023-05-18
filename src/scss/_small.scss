@@ -50,7 +50,7 @@ body:not(.page-home) nav {
 
 .page {
   body.page-home & {
-    padding-top: 2rem;
+    padding-top: 4rem;
   }
 
   h1 {
@@ -67,6 +67,7 @@ body:not(.page-home) nav {
     text-align: center;
     font-family: var(--comisioner);
     font-size: .8em;
+    letter-spacing: 2px;
   }
 
   .button-like {
@@ -80,8 +81,10 @@ body:not(.page-home) nav {
     padding: 0 1em;
     margin-bottom: 2rem;
     margin-top: 1.3em;
-    border: 1px solid var(--line-s);
+    border-bottom: none;
+    border: 1px solid rgba(#000,.5);
     border-radius: .8rem;
+    letter-spacing: 2px
   }
 
   .Selection img {
