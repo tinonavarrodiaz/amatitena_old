@@ -149,6 +149,9 @@ body:not(.page-home) nav {
 .Home .banner{
   margin-top: -3em !important;
 }
+.sligan{
+  font-family: var(--comisioner);
+}
 .Home-item__grid {
   margin-bottom: 3em;
   position: relative;
@@ -207,12 +210,12 @@ body:not(.page-home) nav {
     margin: 0 auto 2rem;
     width: 20%;
   }
-  p{
+  >  p{
     padding: 0 1em;
     text-align: center;
       font-family: var(--crimson);
       font-size: 18px;
-      letter-spacing: 1px;
+      // letter-spacing: 1px;
       // font-weight: 300;
   }
 }
