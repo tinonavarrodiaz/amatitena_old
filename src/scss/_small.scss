@@ -63,11 +63,13 @@ body:not(.page-home) nav {
     // background: lime;
   }
 
-  p {
+  p.distinctive-history__text {
+    // background-color: lime;
     text-align: center;
-    font-family: var(--comisioner);
+    font-family: var(--crimson);
     font-size: .7em;
-    letter-spacing: 2px;
+    // letter-spacing: 2px;
+    // font-weight: 300;
   }
 
   .button-like {
@@ -98,7 +100,7 @@ body:not(.page-home) nav {
 }
 
 .distinctive-history {
-  padding-top: 4em;
+  padding-top: 4.6em;
   padding-left: var(--padding);
   padding-right: var(--padding);
   position: relative;
@@ -118,6 +120,7 @@ body:not(.page-home) nav {
     font-family: var(--crimson) !important;
     font-size: 18px !important;
     letter-spacing: normal;
+    margin-bottom: 4em;
   }
 
   img {
@@ -207,9 +210,10 @@ body:not(.page-home) nav {
   p{
     padding: 0 1em;
     text-align: center;
-      font-family: var(--comisioner);
-      font-size: .8em;
+      font-family: var(--crimson);
+      font-size: 18px;
       letter-spacing: 1px;
+      // font-weight: 300;
   }
 }
 
