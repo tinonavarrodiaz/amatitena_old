@@ -863,3 +863,27 @@ main, #root {
 body{
   overflow-y: scroll !important;
 }
+.main-header{
+  // justify-content: flex-start;
+  max-width: 100vw !important;
+}
+.hamburger.scroll{
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+  background-color: var(--font-color) !important;
+}
+}
+.main-header {
+  position: fixed !important;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  transition: unset !important;
+}
+.header-background {
+  background-color: var(--body-bg);
+  &::after{
+    background-color: rgba(#000,.3) !important;
+  }
+}
