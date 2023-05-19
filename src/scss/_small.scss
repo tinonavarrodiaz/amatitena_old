@@ -935,8 +935,8 @@ body{
 // }
 .Book__texarea{
   border-bottom: none;
-  height: 155px;
-  overflow: hidden;
+  height: 170px;
+  // overflow: hidden;
   &::after{
     display: none !important;
 
@@ -959,7 +959,7 @@ body{
 }
 textarea{
   position: relative;
-  height: 8;
+  height: 90% !important;
   border-bottom: 2px solor red !important;
   // opacity: 0;
   z-index: 100;
@@ -968,4 +968,5 @@ textarea{
   border-left: none !important;
   border-right: none !important;
   background-color: transparent !important;
+  background: rgba(lime,.3) !important;
 }
