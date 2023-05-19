@@ -550,7 +550,7 @@ body:not(.page-home) nav {
     background-color: transparent;
     resize: none;
     height: calc(var(--lh) * 3 + 3px);
-    line-height: calc(var(--lh) + 10px);
+    line-height: calc(var(--lh) + 15px);
     // background-color: red;
     &::first-line{
       line-height: 1;
@@ -926,7 +926,9 @@ body{
 .Book__texarea{
   border-bottom: none;
   height: 150px;
-  // overflow: hidden;
+  background-color: transparent;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(#000, .3);
   &::after{
     display: none !important;
 
@@ -935,12 +937,14 @@ body{
   &::before, &::after{
     content: '';
     display: block !important;
-    width: 100%;
+    width: 150%;
     height: 1px;
     position: absolute;
     top: 42px;
-    left: 0;
+    left: -2em;
+    // transform: translateX(-50%) !important;
     background-color: rgba(#000, .3);
+    // border-bottom: 1px solid #000;
     // opacity: .;
     // background: u;
     z-index: 1;
@@ -950,16 +954,15 @@ body{
   }
 }
 textarea{
-  position: relative;
+  position: absolute;
   height: 90% !important;
+  width: 100%;
   // border-bottom: 2px solor red !important;
   // opacity: 0;
   z-index: 100;
-  border: 1px solid rgba(#000,.3) !important;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
+  border: none !important;
   background-color: transparent !important;
+  // background-color: rgba(#707064,.1) !important;
   // background: rgba(lime,.3) !important;
 }
 .map{
