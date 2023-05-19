@@ -913,19 +913,26 @@ body{
 
 }
  .Book{
-  height: auto !important;
-  button {
-      transform: translateY(-10em);
-    }
-  .Book__img-cont{
-    position:  relative !important;
-    display: none !important;
-    img{
-      margin: 0 !important;
-
-    }
+  button{
+    color: red !important;
   }
  }
-.disclaimer{
+//   height: auto !important;
+//   button {
+//       transform: translateY(-10em);
+//     }
+//   .Book__img-cont{
+//     position:  relative !important;
+//     display: none !important;
+//     img{
+//       margin: 0 !important;
 
-}
+//     }
+//   }
+//  }
+// .disclaimer{
+
+// }
+// textarea{
+//   background-color: lime !important;
+// }
