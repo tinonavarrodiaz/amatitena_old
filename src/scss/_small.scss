@@ -914,7 +914,7 @@ body{
 }
  .Book{
   button{
-    color: red !important;
+    color: var(--font-color) !important;
   }
  }
 //   height: auto !important;
@@ -933,6 +933,39 @@ body{
 // .disclaimer{
 
 // }
-// textarea{
-//   background-color: lime !important;
-// }
+.Book__texarea{
+  border-bottom: none;
+  height: 155px;
+  overflow: hidden;
+  &::after{
+    display: none !important;
+
+  }
+
+  &::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: calc(100% - 1.1em);
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    background-color: lime;
+    background: url('/lineas_2.png') top / cover no-repeat;
+    // opacity: .;
+    // background: u;
+    z-index: 1;
+  }
+}
+textarea{
+  position: relative;
+  height: 8;
+  border-bottom: 2px solor red !important;
+  // opacity: 0;
+  z-index: 100;
+  border: 1px solid rgba(#000,.2) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  background-color: transparent !important;
+}
