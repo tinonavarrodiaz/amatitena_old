@@ -564,17 +564,7 @@ body:not(.page-home) nav {
       margin-bottom: 0 !important;
     }
     // background-color: lightcyan;
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      color: '';
-      width: 100%;
-      height: 1px;
-      background-color: rgba(#000, .3);
-      top:2.5em;
-      box-shadow: 0 calc(var(--lh) - 2px) rgba(#000, .3);
-    }
+
   }
 
   label {
@@ -935,38 +925,50 @@ body{
 // }
 .Book__texarea{
   border-bottom: none;
-  height: 170px;
+  height: 150px;
   // overflow: hidden;
   &::after{
     display: none !important;
 
   }
 
-  &::before{
+  &::before, &::after{
     content: '';
-    display: block;
+    display: block !important;
     width: 100%;
-    height: calc(100% - 1.1em);
+    height: 1px;
     position: absolute;
-    bottom: 25px;
+    top: 42px;
     left: 0;
-    background-color: lime;
-    background: url('/lineas_2.png') top / cover no-repeat;
+    background-color: rgba(#000, .3);
     // opacity: .;
     // background: u;
     z-index: 1;
+  }
+  &::after{
+    transform: translateY(55px);
   }
 }
 textarea{
   position: relative;
   height: 90% !important;
-  border-bottom: 2px solor red !important;
+  // border-bottom: 2px solor red !important;
   // opacity: 0;
   z-index: 100;
-  border: 1px solid rgba(#000,.2) !important;
+  border: 1px solid rgba(#000,.3) !important;
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
   background-color: transparent !important;
-  background: rgba(lime,.3) !important;
+  // background: rgba(lime,.3) !important;
+}
+.map{
+  padding: 2em 2em !important;
+  background-color: var(--body-bg);
+  position: relative;
+  iframe{
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+  }
 }
