@@ -887,3 +887,19 @@ body{
     background-color: rgba(#000,.3) !important;
   }
 }
+.page-home {
+  padding-top: calc(var(--header-height) + 0em);
+
+  header {
+    background-color: var(--body-bg);
+    justify-content: flex-start;
+    // background-color: lime;
+    max-width: 100vw !important;
+
+    .hamburger {
+      margin-left: auto;
+      // background-color: red;
+      transform: translateY(0) scale(.8);
+    }
+  }
+}
