@@ -8,7 +8,7 @@ const Origin = () => {
       <div className="col-left img-container-color gray" data-aos="fade-right">
         {/* <img src={`${path}/girl.jpg`} alt="girl" /> */}
         <Img img="girl" />
-        <p className='piedeimagen'>The name Amatiteña comes from the town of Amatitán, Jalisco:<br />
+        <p className='piedeimagen'>The name Amatiteña comes from the town of Amatitán, Jalisco: <br />
           the birthplace of tequila.</p>
         <Link to={`/tours`} className='btn btn-read '>KNOW OUR TOUR</Link>
       </div>

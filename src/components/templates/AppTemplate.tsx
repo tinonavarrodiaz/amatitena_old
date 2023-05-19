@@ -34,7 +34,7 @@ const AppTemplate = () => {
       let scroll = window.scrollY;
       // console.log(scroll, colLeftHight);
       if(!document.body.classList.contains('page-home')){
-      if (scroll>colLeftHight){
+      if (scroll>0){
         // alert("Scroll");
         document.querySelector('header').classList.add('header-background')
         Hamburger.classList.add('scroll')

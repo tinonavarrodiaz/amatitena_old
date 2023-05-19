@@ -27,7 +27,7 @@ const Book = () => {
             <input type="text" name="language" id="language" />
           </div>
           <div className="Book__form-group">
-            <label htmlFor="date">date and time de attendance:</label>
+            <label htmlFor="date">date and time of attendance:</label>
             <input type="text" name="date" id="date" />
           </div>
           <div className="Book__form-group Book__texarea">
